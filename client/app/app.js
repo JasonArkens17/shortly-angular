@@ -22,6 +22,9 @@ angular.module('shortly', [
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html', 
       controller: 'ShortenController'
+    })
+    .otherwise({
+      redirectTo: 'app/links/links.html'
     });
     // Your code here
 

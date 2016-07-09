@@ -8,6 +8,8 @@ angular.module('shortly.links', [])
     Links.getAll()
     .then(function(links) {
       $scope.data.links = links;
+      console.log('this is my links data====================', links);
+
     }); 
     // $scope.data.links = links;
   };
@@ -17,3 +19,4 @@ angular.module('shortly.links', [])
      
 
 });
+
