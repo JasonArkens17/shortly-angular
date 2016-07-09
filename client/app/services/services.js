@@ -4,9 +4,8 @@ angular.module('shortly.services', [])
   var getAll = function() {
     return $http({
       method: 'GET',
-      url: '/api/links' 
-    }).then(function (resp) { 
-      console.log('===============', resp.data); 
+      url: '/api/links'  
+    }).then(function (resp) {  
       return resp.data;
     });
   };
