@@ -1,22 +1,19 @@
 angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, Links) {
-  
+  // Your code here
+
   $scope.data = {};
 
-  $scope.init = function() {
+  var initializeLinks = function () {
     Links.getAll()
-    .then(function(links) {
-      $scope.data.links = links;
-      console.log('this is my links data====================', links);
-
-    }); 
-    // $scope.data.links = links;
+      .then(function (links) {
+        $scope.data.links = links;
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
 
-  $scope.init(); 
-
-     
-
-});
-
+  initializeLinks();
+  });
